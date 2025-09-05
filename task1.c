@@ -6,15 +6,15 @@ int main(){
 
 
 	char choice;
-	int number_1;
-	int number_2;
-	int sum;
+	float number_1;
+	float number_2;
+	float sum;
 
 	printf("Input select operation (+,-,*,/): ");
 	scanf("%c", &choice);
 
 	printf("Input numbers: ");
-	scanf("%d %d", &number_1, &number_2);
+	scanf("%e %e", &number_1, &number_2);
 
 	switch(choice){
 		case '+':
@@ -27,13 +27,19 @@ int main(){
 		      sum=number_1*number_2;
 		      break;
 		case '/':
-		      sum=number_2/number_1;
-		      break;
-		default:
+			if (number_2 == 0) {
+				printf("Division by zero\n");
+				return 0;
+			} else {
+				sum = number_1 / number_2;
+			}
+			break;
+	      default:
 		      printf("Not correct");
+			return 0;
 	}
 
-	printf("Result: %d \n", sum);
+	printf("Result: %f \n", sum);
 
         return 0;
 
