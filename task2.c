@@ -1,15 +1,23 @@
 #include<stdio.h>
 
 
-void caesarEncrypt(char message, int key);
 
-int main() {
-    char message = scanf("Input text: %m");
-    int key = 3;
+int main()
+{
+    char a,b,c;
+    printf("Input 1st letter:\n");
+    scanf("%s", &a);
+    printf("Input 2nd letter:\n");
+    scanf("%s", &b);
+    printf("Input 3rd letter:\n");
+    scanf("%s", &c);
 
-    printf("Before %s\n", &message);
-    caesarEncrypt(message, key);
-    printf("After: %s\n", message);
+    int key;
+    printf("Key:\n");
+    scanf("%d", &key);
 
-    return 0;
+    if
+    ch = (ch - 'a' + key) % 26 + 'a';
 }
+
+
