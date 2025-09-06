@@ -1,6 +1,16 @@
 #include<stdio.h>
 
 
+char csr(char ch, int key) {
+    if (ch >= 'a' && ch <= 'z') {
+        return (ch - 'a' + key) % 26 + 'a';
+    } else if (ch >= 'A' && ch <= 'Z') {
+        return (ch - 'A' + key) % 26 + 'A';
+    } else {
+        return ch;
+    }
+
+}
 
 int main()
 {
@@ -16,8 +26,14 @@ int main()
     printf("Key:\n");
     scanf("%d", &key);
 
-    if
-    ch = (ch - 'a' + key) % 26 + 'a';
+
+    a = csr(a, key);
+    b = csr(b, key);
+    c = csr(c, key);
+
+
+    printf("%c %c %c %c\n", a, b, c, key);
+
 }
 
 
